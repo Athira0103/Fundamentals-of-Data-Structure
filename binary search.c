@@ -20,9 +20,9 @@ main()
 				for(i=0;i<n;i++)
 				scanf("%d",&a[i]);
 				check1:
-				printf("\nEnter the element to be searched ");
+				printf("Enter the element to be searched ");
 				scanf("%d",&m);
-				printf("Enter: 1 for iterative binary search, 2 for recursive binary search ");
+				printf("\nEnter: 1 for iterative binary search, 2 for recursive binary search ");
 				scanf("%d",&cho);
 				switch(cho)
 				{
@@ -33,7 +33,6 @@ main()
 						}
 					case 2:
 						{
-							printf("\nUsing Recursive Binary search ");
 							int check = bsr(a,0,n-1,m,ch);
 				            if(check==0)
 							printf("\nElement not found");
@@ -43,7 +42,7 @@ main()
 					printf("Wrong choice");					
 				}
 				printf("\nDo you want to continue searching in the same array? (y/n) ");
-				scanf(" %c",&o);
+				scanf("%c",&o);
 				if(o=='y')
 				goto check1;
 			break;
@@ -54,9 +53,9 @@ main()
 				for(i=0;i<n;i++)
 				scanf("%d",&a[i]);
 				check2:
-				printf("\nEnter the element to be searched ");
+				printf("Enter the element to be searched ");
 				scanf("%d",&m);
-				printf("Enter: 1 for iterative binary search, 2 for recursive binary search ");
+				printf("\nEnter: 1 for iterative binary search, 2 for recursive binary search ");
 				scanf("%d",&cho);
 				switch(cho)
 				{
@@ -67,7 +66,6 @@ main()
 						}
 					case 2:
 						{
-							printf("\nUsing Recursive Binary search ");
 							int check = bsr(a,0,n-1,m,ch);
 				            if(check==0)
 							printf("\nElement not found");
@@ -77,7 +75,7 @@ main()
 					printf("Wrong choice");
 				}
 				printf("\nDo you want to continue searching in the same array? (y/n) ");
-				scanf(" %c",&o);
+				scanf("%c",&o);
 				if(o=='y')
 				goto check2;
 			break;
@@ -86,14 +84,13 @@ main()
 			printf("Wrong choice ");				
 	}
 	printf("\nDo you want to continue searching for a different array? (y/n) ");
-	scanf(" %c",&o);
+	scanf("%c",&o);
 	if(o=='n')
 	quit = true;
     }
 }
 void ibs(int a[],int n,int m,int c)
 {
-	printf("\nUsing Iterative Binary search ");
 	int check=0,front = 0,end = n-1,mid;
 	while(front<=end)
 	{
@@ -151,3 +148,4 @@ int bsr(int a[],int front,int end,int m,int c)
 	}
         
 }
+
